@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>loadmode+requirejs</title>
+    <meta charset="utf-8">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.js"></script>
+    <link rel=stylesheet href="http://codemirror.net/lib/codemirror.css">
+  </head>
+  <body>
+    <form>
+      <textarea id="code" name="code">
+def myfun(param):
+  return param
+      </textarea>
+    </form>
+    <button type=button onclick="setMode()">Set Mode</button>
+    <script>
+    requirejs.config({
+      baseUrl: 'http://codemirror.net/whatever',
+      paths: {codemirror: 'lib/codemirror'}
+    });
+    var editor;
+    requirejs(['../lib/codemirror', '../addon/mode/loadmode'], function(codemirror) {
+      window.codemirror=codemirror;
+      codemirror.modeURL="http://codemirror.net/mode/%N/%N.js"
+      editor = codemirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true
+      });
+      editor.setSize('60em', '5em');
+    });
+    function setMode() {
+      window.codemirror.autoLoadMode(editor, "python");
+    }
+    </script>
+  </body>
+</html>
