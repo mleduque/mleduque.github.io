@@ -3,8 +3,8 @@
   <head>
     <title>loadmode+requirejs</title>
     <meta charset="utf-8">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.js"></script>
-    <link rel=stylesheet href="http://codemirror.net/lib/codemirror.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.js"></script>
+    <link rel=stylesheet href="https://codemirror.net/lib/codemirror.css">
   </head>
   <body>
     <form>
@@ -16,13 +16,13 @@ def myfun(param):
     <button type=button onclick="setMode()">Set Mode</button>
     <script>
     requirejs.config({
-      baseUrl: 'http://codemirror.net/whatever',
+      baseUrl: 'https://codemirror.net/whatever',
       paths: {codemirror: 'lib/codemirror'}
     });
     var editor;
     requirejs(['../lib/codemirror', '../addon/mode/loadmode'], function(codemirror) {
       window.codemirror=codemirror;
-      codemirror.modeURL="http://codemirror.net/mode/%N/%N.js"
+      codemirror.modeURL="https://codemirror.net/mode/%N/%N.js"
       editor = codemirror.fromTextArea(document.getElementById("code"), {
         lineNumbers: true
       });
