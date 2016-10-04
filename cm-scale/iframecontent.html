@@ -1,12 +1,5 @@
-<div class="editor">
-aaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaa<br>
-bbbbbbbbbb bbbbbbbbbb bb<br>
-ccc cccc cccc ccc<br>
-d d d d d d d d d d d d d d<br>
-eeeeeeeeeeeeeeeeeeeee<br>
-<br>
+<div class="editor"></div>
 
-</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.19.0/codemirror.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.19.0/codemirror.css">
 <style>
@@ -19,4 +12,11 @@ eeeeeeeeeeeeeeeeeeeee<br>
     const element = document.querySelector('.editor');
     const editor = CodeMirror(element);
     editor.setSize(300, 200);
+    editor.setValue(
+`aaa aaa aaa aaa aaa aaa
+b b b b b b b b b b b b
+cc cc cc cc cc cc cc cc
+ddddddddddddddddddddddd
+`
+    );
 </script>
