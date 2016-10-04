@@ -1,0 +1,22 @@
+<doctyle html>
+<html>
+    <header>
+        <style>
+            iframe {
+                border: 1px solid blue;
+                width: 310px;
+                height: 210px;
+            }
+            .rotate {
+                transform: rotate(45deg);
+            }
+            .editor-iframe {
+                transform-origin: center;
+                position: absolute;
+            }
+        </style>
+    </header>
+    <body>
+        <iframe class="editor-iframe rotate" src="iframecontent.html" style="top:100px;left:100px;"></iframe>
+    </body>
+</html>
