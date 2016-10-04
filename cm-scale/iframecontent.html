@@ -1,0 +1,14 @@
+<div class="editor"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.19.0/codemirror.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.19.0/codemirror.css">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<script>
+    const element = document.querySelector('.editor');
+    const editor = CodeMirror(element);
+    editor.setSize(300, 200);
+</script>
