@@ -1,0 +1,26 @@
+<doctyle html>
+<html>
+    <header>
+        <style>
+            iframe {
+                border: 1px solid blue;
+                width: 310px;
+                height: 210px;
+            }
+            .scaleddown {
+                transform: scale(0.5);
+            }
+            .scaledup {
+                transform: scale(2);
+            }
+            .editor-iframe {
+                transform-origin: top left;
+            }
+        </style>
+    </header>
+    <body>
+        <iframe class="editor-iframe" src="test-cm-iframe.html"></iframe>
+        <iframe class="editor-iframe scaleddown" src="test-cm-iframe.html"></iframe>
+        <iframe class="editor-iframe scaledup" src="test-cm-iframe.html"></iframe>
+    </body>
+</html>
